@@ -578,6 +578,46 @@ ul {
   padding-top: 2.2rem;
 }
 
+.about-portrait {
+  position: relative;
+  margin: 0 0 3rem;
+}
+
+.about-portrait::after {
+  position: absolute;
+  inset: -0.9rem 0.9rem 0.9rem -0.9rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-large);
+  content: "";
+}
+
+.about-portrait img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-large);
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+
+.about-portrait figcaption {
+  position: absolute;
+  z-index: 2;
+  bottom: 1.2rem;
+  left: 1.2rem;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid rgba(215, 239, 114, 0.35);
+  border-radius: 999px;
+  background: rgba(11, 59, 46, 0.88);
+  color: var(--lime);
+  font-size: 0.7rem;
+  font-weight: 850;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+}
+
 .about-content > p {
   max-width: 43rem;
   color: var(--muted);
